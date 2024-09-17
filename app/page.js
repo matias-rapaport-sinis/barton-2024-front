@@ -6,11 +6,10 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
+          src={'/logo.png'}
+          alt="logoLOGO"
           width={180}
-          height={38}
+          height={100}
           priority
         />
         <ol>

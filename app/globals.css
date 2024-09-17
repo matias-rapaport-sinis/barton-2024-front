@@ -40,3 +40,11 @@ a {
     color-scheme: dark;
   }
 }
+
+.bg-color-barton{
+  background-color: #2F6F51 !important;
+}
+
+.text-color-barton{
+  color : #FFFFFF !important;
+}
