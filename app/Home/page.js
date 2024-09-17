@@ -11,44 +11,44 @@ export default function HomePage() {
             <p className="fs-1 text-center font-barton p-3 text-color-barton-brand"> BARTON EN TU PROXIMA OBRA</p>
           </div>
             <div className=" d-flex flex-coloumn " style={{minHeight : "50vh"}}>
-              <div className="flex-grow-1 mx-1" style={{height : 300, widht : 200}} > 
+              <div className="flex-grow-1 mx-1 position-relative"  > 
               <Image
                     src={"/constructor.png"}
                     alt="Logo de Barton"
                     fill
-                    objetjFit="contain"
+                    object-fit="cover"
                   /> 
               </div>
-              <div className="flex-grow-1 mx-1">
+              <div className="flex-grow-1 mx-1 position-relative">
               <Image
                     src={"/constructor.png"}
                     alt="Logo de Barton"
-                    width={200}
-                    height={200}
+                                        fill
+                    object-fit="cover"
                   />
               </div>       
-              <div className="flex-grow-1 mx-1">
+              <div className="flex-grow-1 mx-1 position-relative">
                 <Image
                     src={"/constructor.png"}
                     alt="Logo de Barton"
-                    width={200}
-                    height={200}
+                    fill
+                    object-fit="cover"
                   />
                 </div>       
-              <div className="flex-grow-1 mx-1">
+              <div className="flex-grow-1 mx-1 position-relative">
                 <Image
                     src={"/constructor.png"}
                     alt="Logo de Barton"
-                    width={200}
-                    height={200}
+                    fill
+                    object-fit="cover"
                   />
                 </div>       
-              <div className="flex-grow-1 mx-1">
+              <div className="flex-grow-1 mx-1 position-relative">
                 <Image
                     src={"/constructor.png"}
                     alt="Logo de Barton"
-                    width={200}
-                    height={200}
+                    fill
+                    object-fit="cover"
                   />
                 </div>       
 
