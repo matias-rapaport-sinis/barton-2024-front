@@ -1,7 +1,7 @@
 import "./globals.css";
 import  "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./_components/Navbar/Navbar";
 import BootstrapClient from "./_components/BoostrapClient";
+import NavbarComponent from "./_components/Navbar/Navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="container-fluid p-0">
-        <Navbar />
+        <NavbarComponent />
         {children}
         <BootstrapClient />
       </body>

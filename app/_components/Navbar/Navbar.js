@@ -49,7 +49,7 @@ function NavbarItemIcon({icon, alt}) {
 
     );
 }
-export default function Navbar() {
+export default function NavbarComponent() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-color-barton ">

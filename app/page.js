@@ -1,94 +1,114 @@
+import GridHorizontalComponent from "./_components/GridHorizontal";
+import CardImageWithTitle from "./_components/CardImageWithTitle";
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          src={'/logo.png'}
-          alt="logoLOGO"
-          width={180}
-          height={100}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="container-fluid p-0 h-100">
+     {/*  <div className="row-12 h-100">
+        <iframe fill className="h-100 w-100" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+      </div>
+      */} 
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+      <section className="row">
+        <p className=" text-center font-barton p-3 text-color-barton-brand-second text-uppercase" style={{fontSize : 48, fontWeight : 1000}}> barton en tu proxima obra</p> 
+      </section>
+
+
+      <GridHorizontalComponent>
+        {[
+          {url : "/caracteristicas/1.png", alt : "Hombre que construlle", title : "4 veces mas liviano"},
+          {url : "/caracteristicas/3.png", alt : "Anillo cargado por un hombre", title : "Flexible"},
+          {url : "/caracteristicas/4.png", alt : "Tubos de ensayo con acido", title : "No corresivo"},
+          {url : "/caracteristicas/5.png", alt : "Pared", title : "No conductivo"},
+          {url : "/caracteristicas/2.png", alt : "Red", title : "3 veces mas resistente"},
+          
+        ].map((item, index) => {
+          return <CardImageWithTitle key={`pros-${index}`} {...item} />  
+        })}  
+      </GridHorizontalComponent>
+      
+      <section className="d-flex flex-coloumn position-relative my-5" >
+        {[
+          {url : "/caracteristicas-iconos/1.png", alt : "Hombre que construlle", title : "4 veces mas liviano"},
+          {url : "/caracteristicas-iconos/2.png", alt : "Anillo cargado por un hombre", title : "Flexible"},
+          {url : "/caracteristicas-iconos/3.png", alt : "Tubos de ensayo con acido", title : "No corresivo"},
+          {url : "/caracteristicas-iconos/4.png", alt : "Pared", title : "No conductivo"},
+          {url : "/caracteristicas-iconos/5.png", alt : "Red", title : "3 veces mas resistente"},
+          
+        ].map((item, index) => {
+          return <Image 
+            key={`proscarac-${index}`}
+            alt={item.alt} 
+            src={item.url} 
+            height={150}
+            width={150}
+            className=" mx-auto"/>  
+        })} 
+      </section>
+    
+      <section className="row">
+        <p className=" text-center font-barton p-3 text-color-barton-brand-second text-uppercase" style={{fontSize : 48, fontWeight : 1000}}> Productos barton</p> 
+      </section>
+
+        <section className="d-flex flex-coloumn my-5" >
+          {[
+            {url : "/Productos/1.png", alt : "Hombre que construlle", title : "Barras"},
+            {url : "/Productos/2.png", alt : "Anillo cargado por un hombre", title : "Malla"},
+            {url : "/Productos/3.png", alt : "Tubos de ensayo con acido", title : "Rollo"},
+            {url : "/Productos/4.png", alt : "Pared", title : "Estaca"},
+            {url : "/Productos/5.png", alt : "Red", title : "Especiales"},
+          ].map((item, index) => {
+            return <div key={`proscarac-${index}`} className="flex-grow-1 text-center">
+                <Image 
+                  alt={item.alt} 
+                  src={item.url} 
+                  height={350}
+                  width={348}
+                  className=" mx-auto"/>
+              <p className=" bg-color-barton font-barton w-50 mx-auto text-white rounded text-uppercase" style={{fontSize : 20, fontWeight : 1000}}>{item.title}</p>
+            </div>
+              
+          })} 
+        </section>  
+
+        <section className="row-12 position-relative" style={{height: 200}}>
+          <Image 
+            alt="Hombre que construlle" 
+            src="/barras.png" 
+            fill/>
+        </section>  
+
+
+        <section className="row my-5 Productos barton Productos barton Productos barton Productos barton">
+          <p className=" text-center font-barton p-3 text-color-barton-brand-second text-uppercase" style={{fontSize : 48, fontWeight : 1000}}>Aplicaciones</p> 
+        </section>
+
+        <section className="d-flex flex-coloumn my-5 mx-2" >
+          {[
+            {url : "/aplicaciones/1.png", alt : "Hombre que construlle", title : "Pisos", detail : "Las barras de fibra de vidrio son considerablemente más ligeras que el hierro. Esto facilita el manejo, transporte e instalación de los pisos industriales durante el proceso de construcción. "},
+            {url : "/aplicaciones/2.png", alt : "Anillo cargado por un hombre", title : "Pileta", detail : "Las barras de fibra de vidrio son considerablemente más ligeras que el hierro. Esto facilita el manejo, transporte e instalación de los pisos industriales durante el proceso de construcción. "},
+            {url : "/aplicaciones/3.png", alt : "Tubos de ensayo con acido", title : "Plateas", detail : "Las barras de fibra de vidrio son considerablemente más ligeras que el hierro. Esto facilita el manejo, transporte e instalación de los pisos industriales durante el proceso de construcción. "},
+            {url : "/aplicaciones/4.png", alt : "Pared", title : "Premoldes", detail : "Las barras de fibra de vidrio son considerablemente más ligeras que el hierro. Esto facilita el manejo, transporte e instalación de los pisos industriales durante el proceso de construcción. "},
+            {url : "/aplicaciones/5.png", alt : "Red", title : "Infraestructura", detail : "Las barras de fibra de vidrio son considerablemente más ligeras que el hierro. Esto facilita el manejo, transporte e instalación de los pisos industriales durante el proceso de construcción. "},
+          ].map((item, index) => {
+            return <div key={`proscarac-${index}`} className="flex-grow-1 my-3">
+                <Image 
+                  alt={item.alt} 
+                  src={item.url} 
+                  height={350}
+                  width={348}
+                  className=" mx-auto"/>
+              <div className="border rounded text-center" style={{width : 348}}>
+                <p className="font-barton w-100 text-color-barton-brand text-uppercase my-3" style={{fontSize : 32, fontWeight : 1000}}>{item.title}</p>
+                <p className="font-barton" style={{fontSize: 14, fontWeight: 300}} >{item.detail}</p>
+                <p><a className="link-opacity-75 font-barton text-color-barton-brand" style={{fontSize : 16, fontWeight : 400}} href="#">Ver mas</a></p>
+              </div>
+            </div>
+              
+          })} 
+        </section>
+
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
   );
 }
