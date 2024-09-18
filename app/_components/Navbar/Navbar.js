@@ -52,7 +52,7 @@ function NavbarItemIcon({icon, alt}) {
 export default function NavbarComponent() {
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-color-barton ">
+        <nav className="navbar navbar-expand-lg  sticky-top navbar-light bg-color-barton ">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
                     <Image
