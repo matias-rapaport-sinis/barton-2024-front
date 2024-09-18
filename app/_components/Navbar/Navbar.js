@@ -56,7 +56,7 @@ export default function NavbarComponent() {
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
                     <Image
-                        src={"/logo.png"}
+                        src={"/LogoBarton.png"}
                         alt="Logo de Barton"
                         width={206}
                         height={86}
@@ -85,7 +85,7 @@ export default function NavbarComponent() {
                         <NavbarItem content="Documentacion" href="#" />
                         <NavbarItem content="Contacto" href="#" />
 
-                        <NavbarItemIcon icon="/icono-changuito.png" alt="Icono de chango" />
+                        <NavbarItemIcon icon="/icono-chango.png" alt="Icono de chango" />
                     </ul>
                 </div>
             </div>
