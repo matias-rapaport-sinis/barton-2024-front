@@ -3,15 +3,16 @@ import GridHorizontalComponent from "./_components/GridHorizontal";
 import GridHorizontalItemComponent from "./_components/GridHorizontalItemComponent";
 import DividerTextComponent from "./_components/DividerTextComponent";
 import DividerImageComponent from "./_components/DividerImageComponent";
+import VideoComponent from "./_components/VideoComponent";
 
 export default function Home() {
+
+
   return (
     <main className="p-0">
       
-      <div className="">
-        <iframe fill className="h-100 w-100" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowFullScreen></iframe>
-      </div>
-
+      <VideoComponent url="Video-introduccion.mp4" />
+      
       <DividerTextComponent text="barton en tu proxima obra" />
 
       <GridHorizontalComponent>

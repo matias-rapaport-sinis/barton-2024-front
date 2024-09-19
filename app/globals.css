@@ -35,14 +35,26 @@ body {
   color: #2F6F51 !important;
 }
 
-
+.video::-webkit-media-controls-panel {
+  display: none !important;
+  opacity: 1 !important;}
 
 .text-color-barton-brand-second{
   color :#124734 !important; 
 }
+
 
 .font-barton{
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-left: 90px solid white;
+}
+
