@@ -1,7 +1,6 @@
 "use client"
 import { useState, useRef } from "react";
 
-
 function ButtonPlayer({playFunction}){
     return (
         <div
@@ -22,19 +21,17 @@ function ButtonPause({pauseFunction}){
 export default function VideoComponent({url}){
 
     const [play, setPlay] = useState(false);
-    const videoPlayer = useRef(null);
-
+    const videoPlayerRef = useRef(null);
 
     const playVideo = () => {     
-        videoPlayer.current.play();
+        videoPlayerRef.current.play();
         setPlay(true);
     }
 
     const puaseVideo = () => {
-       videoPlayer.current.pause();
+       videoPlayerRef.current.pause();
        setPlay(false);
     }
-
 
     return (
         <div className="container position-relative d-flex">
@@ -42,7 +39,7 @@ export default function VideoComponent({url}){
             {play ? "" : <ButtonPlayer playFunction={playVideo} />}
             {!play ? "" : <ButtonPause pauseFunction={puaseVideo} />}
 
-        <video ref={videoPlayer} className="w-100 video " style={{aspectRatio : 16 / 9, pointerEvents : "none", opacity: "1 !important"}}  controls preload="none">
+        <video ref={videoPlayerRef} className="w-100 video " style={{aspectRatio : 16 / 9, pointerEvents : "none", opacity: "1 !important"}}  controls preload="none">
         
                 <source src={url} type="video/mp4" />
                 Your browser does not support the video tag.

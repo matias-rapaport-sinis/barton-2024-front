@@ -5,7 +5,7 @@ export default function Footer(){
 
         <section className="row" style={{ height: 777 }}>
         <div className="col-6 position-relative h-100">
-          <Image src="/fondo.png" fill alt="fondo" />
+          <Image src="/fondo.png"  alt="fondo" fill sizes="(max-width: 768px) 850px" />
         </div>
         <div className="col-6 bg-color-barton h-100" style={{ padding: "4rem" }}>
           <p className="text-white font-barton text-uppercase" style={{ fontSize: 28, fontWeight: 1000 }}> Comuniquese con BARTON</p>

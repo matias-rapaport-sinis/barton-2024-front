@@ -1,7 +1,7 @@
 import "./globals.css";
 import  "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "./_components/BoostrapClient";
-import NavbarComponent from "./_components/Navbar/Navbar";
+import NavbarComponent from "./_components/Navbar";
 import Footer from "./_components/Footer";
 
 export const metadata = {

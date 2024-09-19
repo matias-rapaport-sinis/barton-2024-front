@@ -7,7 +7,6 @@ import VideoComponent from "./_components/VideoComponent";
 
 export default function Home() {
 
-
   return (
     <main className="p-0">
       
@@ -27,7 +26,7 @@ export default function Home() {
             return (
               <GridHorizontalItemComponent key={`caracter-${index}`}>
                 <div style={{aspectRatio: "10/16"}} className="position-relative">
-                  <Image src={item.url} alt={item.alt} title={item.title}  fill/>
+                  <Image src={item.url} alt={item.alt} title={item.title}  sizes="(max-width: 768px) 338px" fill/>
                 </div>
                   <p style={{fontSize : "1.2rem"}} className="bg-color-barton text-center text-uppercase p-2 font-barton m-0 text-white"> {item.title}</p>
               </GridHorizontalItemComponent>
@@ -48,7 +47,7 @@ export default function Home() {
             ].map((item, index) => {
               return <GridHorizontalItemComponent key={`caracter-${index}`}> 
                         <div style={{aspectRatio: "1/1", maxWidth : 150}} className="position-relative mx-auto">
-                           <Image src={item.url} alt={item.alt} title={item.title}  fill/>
+                           <Image src={item.url} alt={item.alt} title={item.title} sizes="(max-width: 768px) 150px"  fill/>
                         </div>
                      </GridHorizontalItemComponent>              
             })}
@@ -69,7 +68,9 @@ export default function Home() {
                 <Image
                   alt={item.alt}
                   src={item.url}
-                  fill />
+                  fill
+                  sizes="(max-width: 768px) 334px"
+                  />
               </div>
               <p className="text-center bg-color-barton font-barton w-50 mx-auto text-white rounded text-uppercase" style={{ fontSize: 20, fontWeight: 1000 }}>{item.title}</p>
           </GridHorizontalItemComponent>
@@ -94,7 +95,9 @@ export default function Home() {
                 <Image
                   alt={item.alt}
                   src={item.url}
-                  fill />
+                  fill
+                  sizes="(max-width: 768px) 344px"
+                   />
               </div>
             <div className="border rounded text-center" >
               <p className="font-barton w-100 text-color-barton-brand text-uppercase my-3" style={{ fontSize: 24, fontWeight: 1000 }}>{item.title}</p>
@@ -105,8 +108,6 @@ export default function Home() {
 
         })}
       </GridHorizontalComponent>
-
-
     </main>
   );
 }
